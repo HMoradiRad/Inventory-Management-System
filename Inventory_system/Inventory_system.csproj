@@ -132,7 +132,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataModelLayer\DataModelLayer.csproj">
+      <Project>{87642e89-048d-4554-9871-366bea2f1b52}</Project>
+      <Name>DataModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="img\strella-inventory1.png" />
   </ItemGroup>
