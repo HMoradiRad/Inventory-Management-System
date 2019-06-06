@@ -30,6 +30,11 @@ namespace Inventory_system
             {
                 MessageBox.Show("the user is find");
             }
+            else
+            {
+                MessageBox.Show("invalid UserName Or Password");
+                return;
+            }
         }
 
         private void Btn_exit_Click(object sender, RoutedEventArgs e)
