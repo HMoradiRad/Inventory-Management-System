@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Inventory_system.window;
 
 namespace Inventory_system
 {
@@ -28,7 +29,8 @@ namespace Inventory_system
         {
             if (txt_username.Text == "a" && txt_pasword.Password == "123")
             {
-                MessageBox.Show("the user is find");
+                this.Close();
+
             }
             else
             {

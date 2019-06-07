@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Inventory_system.window;
 
 namespace Inventory_system
 {
@@ -13,5 +14,13 @@ namespace Inventory_system
     /// </summary>
     public partial class App : Application
     {
+        private void App_StartUp(object sender, StartupEventArgs e)
+        {
+            win_login w_n = new win_login();
+            w_n.ShowDialog();
+
+            win_main w_main = new win_main();
+            w_main.ShowDialog();
+        }
     }
 }
