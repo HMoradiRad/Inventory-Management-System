@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Inventory_system.window;
+using Microsoft.Win32;
 
 namespace Inventory_system
 {
@@ -29,6 +30,19 @@ namespace Inventory_system
         {
             if (txt_username.Text == "a" && txt_pasword.Password == "123")
             {
+                RegistryKey UserNameKey = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Frosh");
+                try
+                {
+                    UserNameKey.SetValue("UserNameRegister",txt_username.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("در هنگام ورود کاربر مشکل به وجود آمد");
+                }
+                finally
+                {
+                    UserNameKey.Close();
+                }
                 this.Close();
 
             }
@@ -47,6 +61,12 @@ namespace Inventory_system
         public void ali(int a)
         {
             MessageBox.Show("vared shodid");
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            RegistryKey masterkey = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Frosh");
+            txt_username.Text = (string)masterkey.GetValue("UserNameRegister");
         }
     }
 }

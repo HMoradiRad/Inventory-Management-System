@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Inventory_system"
         xmlns:PersianDateControls="clr-namespace:Arash.PersianDateControls;assembly=PersianDateControls" x:Class="Inventory_system.win_login"
         mc:Ignorable="d"
-        Title="win_login" Height="495" Width="580" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="win_login" Height="495" Width="580" WindowStyle="None" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid Margin="0,10,0,0">
         <Rectangle HorizontalAlignment="Left" Height="477" Stroke="Black" VerticalAlignment="Top" Width="552" RadiusX="10" RadiusY="10" Margin="10,-10,0,0">
             <Rectangle.Effect>
@@ -36,7 +36,7 @@
         </Image>
         <Label Content="نام کاربری:" HorizontalAlignment="Left" Margin="179,147,0,0" VerticalAlignment="Top" FontWeight="Bold" FlowDirection="RightToLeft"/>
         <Label Content="رمز عبور :" HorizontalAlignment="Left" Margin="179,193,0,0" VerticalAlignment="Top" FontWeight="Bold" FlowDirection="RightToLeft"/>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="31,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120">
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="31,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
