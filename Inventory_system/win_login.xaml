@@ -57,5 +57,10 @@
             </Button.Effect>
         </Button>
         <PersianDateControls:PersianCalendar Name="calender" HorizontalAlignment="Left" Height="224" Margin="292,99,0,0" VerticalAlignment="Top" Width="254"/>
+        <Label x:Name="lable14" Content=": امروز  " HorizontalAlignment="Left" Margin="513,419,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_dayName" Content="چهارشنبه" HorizontalAlignment="Left" Margin="459,420,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_daynum" Content="22" HorizontalAlignment="Left" Margin="424,420,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_month" Content="خرداد" HorizontalAlignment="Left" Margin="373,420,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_year" Content="1398" HorizontalAlignment="Left" Margin="328,421,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
     </Grid>
 </Window>

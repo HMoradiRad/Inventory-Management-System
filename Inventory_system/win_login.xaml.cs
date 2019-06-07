@@ -65,8 +65,15 @@ namespace Inventory_system
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // code for rigestery
             RegistryKey masterkey = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Frosh");
             txt_username.Text = (string)masterkey.GetValue("UserNameRegister");
+
+            // code for date
+            lbl_dayName.Content = calender.SelectedDate.PersianDayOfWeek;
+            lbl_daynum.Content = calender.SelectedDate.Day;
+            lbl_month.Content = calender.SelectedDate.MonthAsPersianMonth;
+            lbl_year.Content = calender.SelectedDate.Year;
         }
     }
 }
