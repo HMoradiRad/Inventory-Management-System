@@ -36,12 +36,12 @@
         </Image>
         <Label Content="نام کاربری:" HorizontalAlignment="Left" Margin="179,147,0,0" VerticalAlignment="Top" FontWeight="Bold" FlowDirection="RightToLeft"/>
         <Label Content="رمز عبور :" HorizontalAlignment="Left" Margin="179,193,0,0" VerticalAlignment="Top" FontWeight="Bold" FlowDirection="RightToLeft"/>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="31,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold">
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="31,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" VerticalContentAlignment="Center">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <PasswordBox x:Name="txt_pasword" HorizontalAlignment="Left" Margin="31,201,0,0" VerticalAlignment="Top" Width="120" Height="23">
+        <PasswordBox x:Name="txt_pasword" HorizontalAlignment="Left" Margin="31,201,0,0" VerticalAlignment="Top" Width="120" Height="23" VerticalContentAlignment="Center">
             <PasswordBox.Effect>
                 <DropShadowEffect/>
             </PasswordBox.Effect>

@@ -55,7 +55,7 @@ namespace Inventory_system
 
         private void Btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            System.Environment.Exit(0);
         }
 
         public void ali(int a)
@@ -70,6 +70,12 @@ namespace Inventory_system
             txt_username.Text = (string)masterkey.GetValue("UserNameRegister");
 
             // code for date
+            setDate();
+            ////////////// insert curser into pasword box
+            txt_pasword.Focus();
+        }
+        private void setDate()
+        {
             lbl_dayName.Content = calender.SelectedDate.PersianDayOfWeek;
             lbl_daynum.Content = calender.SelectedDate.Day;
             lbl_month.Content = calender.SelectedDate.MonthAsPersianMonth;
