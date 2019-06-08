@@ -21,8 +21,8 @@
             </Custom:Ribbon.QuickAccessToolBar>
             <Custom:Ribbon.ApplicationMenu>
                 <Custom:RibbonApplicationMenu>
-                    <Custom:RibbonApplicationMenuItem Header="تعریف کاربران" ImageSource="../img/44.png"/>
-                    <Custom:RibbonApplicationMenuItem Header="تعریف دسترسی کاربران" ImageSource="../img/advanced.tiff"/>
+                    <Custom:RibbonApplicationMenuItem Header="تعریف کاربران" ImageSource="../img/44.png" Click="btn_showuser_Click"/>
+                    <Custom:RibbonApplicationMenuItem Header="تعریف دسترسی کاربران" ImageSource="../img/advanced.tiff" />
                     <Custom:RibbonApplicationMenuItem Header="تغییر کلمه عبور" ImageSource="../img/2.png"/>
                     <Custom:RibbonApplicationMenuItem Header="تعریف اجزای سیستم"  ImageSource="../img/ajza.png"/>
                     <Custom:RibbonApplicationMenuItem Header="تعریف مشتریان"  ImageSource="../img/customer.png"/>

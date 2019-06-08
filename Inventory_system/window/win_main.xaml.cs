@@ -43,6 +43,11 @@ namespace Inventory_system.window
         {
             setAbaad();
         }
+        private void btn_showuser_Click(object sender, RoutedEventArgs e)
+        {
+            win_users w_user = new win_users();
+            w_user.ShowDialog();
+        }
         private void setAbaad()
         {
             this.MaxHeight = 650;

@@ -31,3 +31,5 @@ C:\Users\kakero\Desktop\Inventory_system\Inventory_system\bin\Debug\Microsoft.Wi
 C:\Users\kakero\Desktop\Inventory_system\Inventory_system\bin\Debug\Microsoft.Windows.Shell.xml
 C:\Users\kakero\Desktop\Inventory_system\Inventory_system\bin\Debug\RibbonControlsLibrary.pdb
 C:\Users\kakero\Desktop\Inventory_system\Inventory_system\bin\Debug\RibbonControlsLibrary.xml
+C:\Users\kakero\Desktop\Inventory_system\Inventory_system\obj\Debug\window\win_users.baml
+C:\Users\kakero\Desktop\Inventory_system\Inventory_system\obj\Debug\window\win_users.g.cs
