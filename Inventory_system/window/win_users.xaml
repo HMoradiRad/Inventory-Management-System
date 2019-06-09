@@ -1,6 +1,7 @@
-﻿<Window x:Class="Inventory_system.window.win_users"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" x:Class="Inventory_system.window.win_users"
         Title="win_users" Height="600" Width="700" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True" >
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="600" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="10" RadiusY="10"/>
@@ -13,7 +14,57 @@
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <DataGrid HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Height="311" Width="662"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="10,421,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="662"/>
+        <Label Content="جستوجو" HorizontalAlignment="Left" Margin="619,439,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Name"  HorizontalAlignment="Left" Height="23" Margin="390,478,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FlowDirection="RightToLeft"/>
+        <TextBox x:Name="txt_family" HorizontalAlignment="Left" Height="23" Margin="161,478,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.072,3.349" FlowDirection="LeftToRight"/>
+        <Label Content="نام" HorizontalAlignment="Left" Margin="533,475,0,0" VerticalAlignment="Top" FlowDirection="RightToLeft"/>
+        <Label Content="نام خانوادگی" HorizontalAlignment="Left" Margin="302,475,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image_search" HorizontalAlignment="Left" Height="33" Margin="84,475,0,0" VerticalAlignment="Top" Width="30" Stretch="Fill" Source="../img/search.ico" Cursor="Hand"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="68" Margin="10,527,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="660" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.562"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.49"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="btn_new_user" Content="کاربر جدید" HorizontalAlignment="Left" Margin="452,541,0,0" VerticalAlignment="Top" Width="75" Height="34" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFCFBDDA" Offset="0.41800001263618469"/>
+                    <GradientStop Color="#FF9B86A8" Offset="0.418"/>
+                    <GradientStop Color="#FF9766B8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_edituser" Content="ویرایش کاربر" HorizontalAlignment="Left" Margin="308,542,0,0" VerticalAlignment="Top" Width="75" Height="33" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFCFBDDA" Offset="0.41800001263618469"/>
+                    <GradientStop Color="#FF9B86A8" Offset="0.418"/>
+                    <GradientStop Color="#FF9766B8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_deluser" Content="حذف کاربر" HorizontalAlignment="Left" Margin="170,540,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.533,-0.227" Height="34" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFCFBDDA" Offset="0.41800001263618469"/>
+                    <GradientStop Color="#FF9B86A8" Offset="0.418"/>
+                    <GradientStop Color="#FF9766B8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+
+
     </Grid>
 </Window>
