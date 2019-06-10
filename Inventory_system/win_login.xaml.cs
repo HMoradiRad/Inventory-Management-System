@@ -81,5 +81,10 @@ namespace Inventory_system
             lbl_month.Content = calender.SelectedDate.MonthAsPersianMonth;
             lbl_year.Content = calender.SelectedDate.Year;
         }
+
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

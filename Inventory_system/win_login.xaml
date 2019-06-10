@@ -19,7 +19,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="86" Margin="10,-10,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="552">
+        <Rectangle HorizontalAlignment="Left" Height="86" Margin="10,-10,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="552" MouseDown="Rectangle_MouseDown">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>

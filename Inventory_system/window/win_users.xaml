@@ -5,7 +5,7 @@
         Title="win_users" Height="600" Width="700" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True" >
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="600" Stroke="Black" VerticalAlignment="Top" Width="700" RadiusX="10" RadiusY="10"/>
-        <Rectangle Fill="#FF828D82" HorizontalAlignment="Left" Height="100" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="700" RenderTransformOrigin="0.32,0.28"/>
+        <Rectangle Fill="#FF828D82" HorizontalAlignment="Left" Height="100" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="700" RenderTransformOrigin="0.32,0.28" MouseDown="Rectangle_MouseDown"/>
         <Label Content="فرم نمایش کاربران" HorizontalAlignment="Left" Margin="272,32,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="36,0,0,0" VerticalAlignment="Top" Width="100"/>
         <Image x:Name="image_close" HorizontalAlignment="Left" Height="45" Margin="642,10,0,0" VerticalAlignment="Top" Width="30" Source="../img/exit.png" Opacity=".7" Cursor="Hand"/>
