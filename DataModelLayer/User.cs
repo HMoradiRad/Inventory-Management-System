@@ -16,12 +16,12 @@ namespace DataModelLayer
     {
         public int UserID { get; set; }
         public string UserName { get; set; }
-        public string userfamilu { get; set; }
         public string UserTel { get; set; }
         public string UserUserName { get; set; }
         public string UserPassword { get; set; }
         public Nullable<byte> UserAge { get; set; }
         public Nullable<byte> UserGender { get; set; }
         public Nullable<byte> UserActive { get; set; }
+        public string userfamily { get; set; }
     }
 }

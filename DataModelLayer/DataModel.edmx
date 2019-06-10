@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FroshModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FroshModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="50" />
-          <Property Name="userfamilu" Type="varchar" MaxLength="100" />
+          <Property Name="userfamily" Type="varchar" MaxLength="100" />
           <Property Name="UserTel" Type="varchar" MaxLength="11" />
           <Property Name="UserUserName" Type="varchar" MaxLength="50" />
           <Property Name="UserPassword" Type="varchar" MaxLength="128" />
@@ -19,11 +19,43 @@
           <Property Name="UserGender" Type="tinyint" />
           <Property Name="UserActive" Type="tinyint" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Frosh.dbo.Vw_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="userfamily" Type="varchar" MaxLength="100" />
+          <Property Name="UserTel" Type="varchar" MaxLength="11" />
+          <Property Name="UserUserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="128" />
+          <Property Name="UserAge" Type="tinyint" />
+          <Property Name="UserGender" Type="tinyint" />
+          <Property Name="UserActive" Type="tinyint" />
+          <Property Name="Usergenderfarsi" Type="varchar" MaxLength="6" />
+          <Property Name="Useractivefarsi" Type="varchar" MaxLength="8" />
+        </EntityType>
         <EntityContainer Name="FroshModelStoreContainer">
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vw_Users" EntityType="Self.Vw_Users" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Users].[UserID] AS [UserID], 
+    [Vw_Users].[UserName] AS [UserName], 
+    [Vw_Users].[userfamily] AS [userfamily], 
+    [Vw_Users].[UserTel] AS [UserTel], 
+    [Vw_Users].[UserUserName] AS [UserUserName], 
+    [Vw_Users].[UserPassword] AS [UserPassword], 
+    [Vw_Users].[UserAge] AS [UserAge], 
+    [Vw_Users].[UserGender] AS [UserGender], 
+    [Vw_Users].[UserActive] AS [UserActive], 
+    [Vw_Users].[Usergenderfarsi] AS [Usergenderfarsi], 
+    [Vw_Users].[Useractivefarsi] AS [Useractivefarsi]
+    FROM [dbo].[Vw_Users] AS [Vw_Users]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FroshModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -33,17 +65,34 @@
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="userfamilu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="UserTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
           <Property Name="UserAge" Type="Byte" />
           <Property Name="UserGender" Type="Byte" />
           <Property Name="UserActive" Type="Byte" />
+          <Property Name="userfamily" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="FroshEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Vw_Users" EntityType="FroshModel.Vw_Users" />
         </EntityContainer>
+        <EntityType Name="Vw_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="userfamily" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserAge" Type="Byte" />
+          <Property Name="UserGender" Type="Byte" />
+          <Property Name="UserActive" Type="Byte" />
+          <Property Name="Usergenderfarsi" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Useractivefarsi" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -53,15 +102,32 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="FroshModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="userfamily" ColumnName="userfamily" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="userfamilu" ColumnName="userfamilu" />
                 <ScalarProperty Name="UserTel" ColumnName="UserTel" />
                 <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
                 <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
                 <ScalarProperty Name="UserAge" ColumnName="UserAge" />
                 <ScalarProperty Name="UserGender" ColumnName="UserGender" />
                 <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Users">
+            <EntityTypeMapping TypeName="FroshModel.Vw_Users">
+              <MappingFragment StoreEntitySet="Vw_Users">
+                <ScalarProperty Name="Useractivefarsi" ColumnName="Useractivefarsi" />
+                <ScalarProperty Name="Usergenderfarsi" ColumnName="Usergenderfarsi" />
+                <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+                <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+                <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+                <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+                <ScalarProperty Name="userfamily" ColumnName="userfamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

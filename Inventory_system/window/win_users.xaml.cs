@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using DataModelLayer;
 namespace Inventory_system.window
 {
     /// <summary>
@@ -24,9 +24,17 @@ namespace Inventory_system.window
             InitializeComponent();
         }
 
+        FroshEntities database = new FroshEntities();
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from u in database.Vw_Users select u;
+            var user = query.ToList();
+            dataGrid_user.ItemsSource = user;
         }
     }
 }

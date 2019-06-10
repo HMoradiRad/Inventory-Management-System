@@ -26,5 +26,6 @@ namespace DataModelLayer
         }
     
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Vw_Users> Vw_Users { get; set; }
     }
 }

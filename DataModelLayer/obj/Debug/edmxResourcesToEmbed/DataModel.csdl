@@ -6,15 +6,32 @@
     </Key>
     <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="userfamilu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="UserTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
     <Property Name="UserAge" Type="Byte" />
     <Property Name="UserGender" Type="Byte" />
     <Property Name="UserActive" Type="Byte" />
+    <Property Name="userfamily" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="FroshEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Vw_Users" EntityType="FroshModel.Vw_Users" />
   </EntityContainer>
+  <EntityType Name="Vw_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userfamily" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UserAge" Type="Byte" />
+    <Property Name="UserGender" Type="Byte" />
+    <Property Name="UserActive" Type="Byte" />
+    <Property Name="Usergenderfarsi" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Useractivefarsi" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

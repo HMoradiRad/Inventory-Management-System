@@ -4,15 +4,32 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="FroshModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userfamily" ColumnName="userfamily" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="userfamilu" ColumnName="userfamilu" />
           <ScalarProperty Name="UserTel" ColumnName="UserTel" />
           <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
           <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
           <ScalarProperty Name="UserAge" ColumnName="UserAge" />
           <ScalarProperty Name="UserGender" ColumnName="UserGender" />
           <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Users">
+      <EntityTypeMapping TypeName="FroshModel.Vw_Users">
+        <MappingFragment StoreEntitySet="Vw_Users">
+          <ScalarProperty Name="Useractivefarsi" ColumnName="Useractivefarsi" />
+          <ScalarProperty Name="Usergenderfarsi" ColumnName="Usergenderfarsi" />
+          <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+          <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+          <ScalarProperty Name="userfamily" ColumnName="userfamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="48e6054ee55e4262add5a00ae2e77cfd" Name="Diagram1">
         <EntityTypeShape EntityType="FroshModel.User" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FroshModel.Vw_Users" Width="1.5" PointX="2.625" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
