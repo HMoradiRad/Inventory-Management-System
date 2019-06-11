@@ -8,7 +8,7 @@
         <Rectangle Fill="#FF828D82" HorizontalAlignment="Left" Height="100" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="700" RenderTransformOrigin="0.32,0.28" MouseDown="Rectangle_MouseDown"/>
         <Label Content="فرم نمایش کاربران" HorizontalAlignment="Left" Margin="272,32,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="36,0,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image x:Name="image_close" HorizontalAlignment="Left" Height="45" Margin="642,10,0,0" VerticalAlignment="Top" Width="30" Source="../img/exit.png" Opacity=".7" Cursor="Hand"/>
+        <Image x:Name="image_close" HorizontalAlignment="Left" Height="45" Margin="642,10,0,0" VerticalAlignment="Top" Width="30" Source="../img/exit.png" Opacity=".7" Cursor="Hand" MouseDown="image_close_MouseDown"/>
         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="62" Source="../img/mottakere.png" Margin="0,10,0,0">
             <Image.Effect>
                 <DropShadowEffect/>
@@ -63,7 +63,30 @@
             </Button.Background>
         </Button>
         <Grid HorizontalAlignment="Left" Height="306" Margin="10,110,0,0" VerticalAlignment="Top" Width="680"/>
-        <DataGrid x:Name="dataGrid_user" HorizontalAlignment="Left" Margin="0,115,0,0" VerticalAlignment="Top" Width="690" Height="306"/>
+        <DataGrid x:Name="dataGrid_user" HorizontalAlignment="Left" Margin="0,115,0,0" VerticalAlignment="Top" Width="690" Height="306" FlowDirection="RightToLeft" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="شماره کاربر" Binding="{Binding UserID}">
+                  
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="نام کاربر" Binding="{Binding UserName}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="نام خانوادگی" Binding="{Binding userfamily}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="شمارتماس" Binding="{Binding UserTel}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="شمارتماس" Binding="{Binding UserTel}">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="سن کاربر" Binding="{Binding UserAge}">
+
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
 
 
 

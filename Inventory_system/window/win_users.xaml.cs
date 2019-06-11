@@ -36,5 +36,10 @@ namespace Inventory_system.window
             var user = query.ToList();
             dataGrid_user.ItemsSource = user;
         }
+
+        private void image_close_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
